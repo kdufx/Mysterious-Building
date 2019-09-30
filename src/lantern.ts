@@ -7,24 +7,24 @@ export function createLantern(){
     
     
     let lt3= lantern3(new Vector3(30.4, 7, 1))
-    addStick1(new Vector3(-.4,-.2,0),lt3)
-    addStick2(new Vector3(-.4,1.3,0),Quaternion.Euler(90,0,90),lt3)
-    lantern3(new Vector3(-.8,0,0),lt3)
+    addStick1(new Vector3(30, 6.6, 1),null)
+    addStick2(new Vector3(30, 8.2, 1),Quaternion.Euler(90,0,90),null)
+    lantern3(new Vector3(29.6, 7, 1),null)
     //平行X
     let lt3_1= lantern3(new Vector3(30.4, 7, 6))
-    addStick1(new Vector3(-.4,-.2,0),lt3_1)
-    addStick2(new Vector3(-.4,1.3,0),Quaternion.Euler(90,0,90),lt3_1)
-    lantern3(new Vector3(-.8,0,0),lt3_1)
+    addStick1(new Vector3(30, 6.6, 6),null)
+    addStick2(new Vector3(30, 8.2, 6),Quaternion.Euler(90,0,90),null)
+    lantern3(new Vector3(29.6, 7, 6),null)
     //平行Z
     // let lt3_2= lantern3(new Vector3(23.5, 7, .4))
     // addStick1(new Vector3(0,-.2,0.5),lt3_2)
     // addStick2(new Vector3(0,1.3,0.5),Quaternion.Euler(90,0,0),lt3_2)
     // lantern3(new Vector3(0,0,1),lt3_2)
-    //短
-    let lt3_2= lantern3(new Vector3(23.5, 6, .8))
-    addStick1(new Vector3(0,0.2,0.4),lt3_2,2.5)
-    addStick2(new Vector3(0,1.3,0.4),Quaternion.Euler(90,0,0),lt3_2)
-    lantern3(new Vector3(0,0,.8),lt3_2)
+    //短z
+    let lt3_2= lantern3(new Vector3(23.5, 6.35, .8),null,.9)
+    addStick1(new Vector3(23.5, 6.3, 1.2),null,2.5)
+    addStick2(new Vector3(23.5, 7.5, 1.2),Quaternion.Euler(90,0,0),null)
+    lantern3(new Vector3(23.5, 6.35, 1.6),null,.9)
     // let lt3_2= addStick1(new Vector3(23.5, 5, 1),null,2.5)
     // lantern3(new Vector3(.5, .2, ),lt3_2)
     // addStick2(new Vector3(0,1.3,0.5),Quaternion.Euler(90,0,0),lt3_2)
@@ -51,18 +51,18 @@ export function createLantern(){
 
     //room2 
     let lt3_3= lantern3(new Vector3(30.6, 12.45, 23))
-    addStick1(new Vector3(-.35,-.4,0),lt3_3,3.7)
-    addStick2(new Vector3(-.35,1.3,0),Quaternion.Euler(90,0,90),lt3_3)
-    lantern3(new Vector3(-.7,0,0),lt3_3)
+    addStick1(new Vector3(30.2, 11.85, 23),null,3.7)
+    addStick2(new Vector3(30.2, 13.65, 23),Quaternion.Euler(90,0,90),null)
+    lantern3(new Vector3(29.8, 12.45, 23),null)
     let lt3_4= lantern3(new Vector3(27.5, 12.45, 23))
-    addStick1(new Vector3(-.35,-.4,0),lt3_4,3.7)
-    addStick2(new Vector3(-.35,1.3,0),Quaternion.Euler(90,0,90),lt3_4)
-    lantern3(new Vector3(-.7,0,0),lt3_4)
+    addStick1(new Vector3(27.1, 11.85, 23),null,3.7)
+    addStick2(new Vector3(27.1, 13.65, 23),Quaternion.Euler(90,0,90),null)
+    lantern3(new Vector3(26.7, 12.45, 23),null)
 
     let lt3_5= lantern3(new Vector3(25, 12.45, 30))
-    addStick1(new Vector3(0,-.4,0.35),lt3_5,3.7)
-    addStick2(new Vector3(0,1.3,0.35),Quaternion.Euler(90,0,0),lt3_5)
-    lantern3(new Vector3(0,0,.7),lt3_5)
+    addStick1(new Vector3(25, 11.85, 30.4),null,3.7)
+    addStick2(new Vector3(25, 13.65, 30.4),Quaternion.Euler(90,0,0),null)
+    lantern3(new Vector3(25, 12.45, 30.8),null)
 }
 //竖棍s
 export function addStick1(position, parent?:Entity,height?:number){
@@ -105,7 +105,7 @@ export function lantern3(position,parent?:Entity,scale?:number){
     engine.addEntity(chineseLantern_03)
     let stick=new Entity()
     stick.addComponent(new BoxShape())
-    stick.addComponent(new Transform({position:new Vector3(0,.8,0),scale:new Vector3(.01,1,.01)}))
+    stick.addComponent(new Transform({position:new Vector3(0,.7,0),scale:new Vector3(.01,1,.01)}))
     let m=new Material()
     m.albedoColor=Color3.Red()//FromHexString('#2A1610')
     stick.setParent(chineseLantern_03)

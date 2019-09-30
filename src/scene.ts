@@ -1239,8 +1239,10 @@ export function createScene(){
     column_Vertical_Wood_Large.addComponentOrReplace(transform_111)
     engine.addEntity(column_Vertical_Wood_Large)
     let lt3=lantern3(new Vector3(31, 16.2, 31.2),null,1.5)
-    addStick2(new Vector3(-.35,1.3,-.35),Quaternion.Euler(90,0,-45),lt3,1.3)
-    lantern3(new Vector3(-.7, 0, -.7),lt3)
+    let st2=addStick2(new Vector3(),Quaternion.Euler(90,0,-45),null)
+    st2.addComponentOrReplace(new Transform({position:new Vector3(30.5, 18, 30.7),rotation:Quaternion.Euler(90,0,-45),scale:new Vector3(.15,1.7,.15)}))
+
+    lantern3(new Vector3(30, 16.2, 30.2),null,1.5)
 
     //room2 栅栏大
     const fenceWoodLarge_01 = new Entity()
@@ -1491,12 +1493,14 @@ function createRoom3(){
 
     //灯笼
     let lt3= lantern3(new Vector3(-3.9, 2.5, 5),chinesePergola_01)
-    addStick1(new Vector3(-.35,-.4,0),lt3,3.7)
-    addStick2(new Vector3(-.35,1.25,0),Quaternion.Euler(90,0,90),lt3)
-    lantern3(new Vector3(-.7,0,0),lt3)
+    addStick1(new Vector3(-3.5, 1.9, 5),chinesePergola_01,3.7)
+    addStick2(new Vector3(-3.5, 3.7, 5),Quaternion.Euler(90,0,90),chinesePergola_01)
+    lantern3(new Vector3(-3.1, 2.5, 5),chinesePergola_01)
     
-    let lt4=lantern3(new Vector3(5, 17.2, 28),null,3)
-    addStick2(new Vector3(-.35,1.3,.35),Quaternion.Euler(90,0,45),lt4,1.3)
+    lantern3(new Vector3(5, 17.2, 28),null,3)
+    let st= addStick2(new Vector3(),Quaternion.Euler(90,0,45),null,1.6)
+    st.addComponentOrReplace(new Transform({position:new Vector3(4, 21.2, 29),rotation:Quaternion.Euler(90,0,45),scale:new Vector3(.3,4,.3)}))
+
     // lantern3(new Vector3(-1, 0, -1),lt4)
 
     
